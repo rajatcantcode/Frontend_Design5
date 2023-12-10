@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #111;
+}
+.nav {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+.nav a i{
+    margin: 0 10px;
+}
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+.logo .line{
+    height: 2px;
+    width: 130px;
+    background-color: rgb(210, 5, 5);
+}
+.logo img{
+    width: 120px;
+    margin: 0 20px;
+}
+.nav-center a{
+    white-space: nowrap;
+}
+
+.content{
+    display: flex;
+    width: 100vw;
+    min-height: 90vh;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: calc(100%/3);
+    min-height: inherit;
+    color: #fff;
+    padding: 0 3vw;
+    
+}
+.left h1{
+    margin-bottom: 1vw;
+    line-height: 1;
+    font-size: 4vw;
+}
+.left h1 span{
+    font-weight: 300;
+    color: rgb(210, 5, 5);
+}
+.left p {
+    width: 80%;
+}
+.left button{
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 15px 32px;
+    color: #fff;
+    background-color: rgb(210, 5, 5);
+}
+.left button i{
+    margin-right: 10px;
+}
+.btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.btn>i{
+    margin-left: 30px;
+    color: red;
+}
+
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/3);
+    min-height: inherit;
+
+}
+.center .tomb{
+    position: relative;
+    width: 70%;
+    min-height: 70vh;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    background-image: url(http://rb.gy/619ju);
+    background-size: cover;
+    
+}
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 48%;
+    height: 3vw;
+    padding: 0 10px 0 4px;
+    border-radius: 100px;
+    background-color: #333;
+}
+.badge .pic{
+    background-image: url(http://rb.gy/eyp26);
+    background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+}
+.badge .info {
+    color: #fff;
+}
+
+
+.right {
+    position: relative;
+    width: calc(100%/3);
+    min-height: inherit;    
+}
+.bottom {
+    padding: 0 5vw;
+    width: 80%;
+    bottom: 10vh;
+    /* background-color: red; */
+    position: absolute;
+}
+.bottom .row{
+    color: #fff;
+    opacity: 0.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+}
+.bottom .row:nth-child(3) {
+    opacity: 1;
+    border: none;
+}
+.bottom p{
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+}
+.bottom .scroll{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* justify-content: space-between; */
+    color: #fff;
+    margin-top: 40px;
+    opacity: 0.5;
+}
+.scroll .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.circle i{
+    font-size: 3.5vh;
+}
+
+@media (max-width: 500px) {
+    .nav a{
+        font-size: 13px;
+    }
+    .nav a i{
+        margin-right: 5px;
+    }
+    .nav .nav-center a{
+        display: none;
+    }
+    .nav-center .logo .line{
+        width: 5vw ;
+    }
+    .logo img{
+        width: 100px;
+        margin: 0 5px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+    .content .left{
+        width: 100%;
+        min-height: initial;
+        padding: 10vw 3vw;
+    }
+    .left h1{
+        font-size: 9vw;
+    }
+    .left p{
+        margin-top: 20px;
+    }
+    .content .center{
+        width: 100%;
+        min-height: 10vh;
+        margin: 10px 0 10px 0;
+
+    }
+    .center .tomb{
+        width: 65%;
+        min-height: 75vh;
+    }
+    .tomb .badge{
+        top: 25%;
+        left: 68%;
+        width: 50%;
+        height: 8vw;
+        font-size: 15px;
+    }
+    .badge .pic{
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+    .badge .info h4{
+        font-size: 3vw;
+    }
+    .content .right{
+        width: 100%;
+        min-height: initial;
+        margin-top: 20vw;
+        margin-bottom: 10vw;
+    }
+    .right .bottom{
+        width: 100%;
+        position: static;
+        bottom: initial;
+    }
+}
